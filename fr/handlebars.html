@@ -1,0 +1,24 @@
+<script src="js/external/handlebars.runtime.js"></script>
+<script src="js/templates/templates.js"></script>
+
+LibraryView = Backbone.View.extend({
+
+  initialize: function(){
+    this.render();
+  },
+  events:{
+    'click': 'alertBook'
+  },
+  alertBook: function(e){
+    alert('Book clicked');
+  },
+  template: Handlebars.templates['library'],
+  render: function(){
+    var self = this;
+    var output = this;
+    var output = self.template({'library': self.collection.toJSON()});
+    self.$el.append(output);
+    return self;
+  }
+});
+
