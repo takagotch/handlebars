@@ -22,3 +22,18 @@ LibraryView = Backbone.View.extend({
   }
 });
 
+
+//
+<script src="js/external/handlebars.js"></script>
+
+<script type="text/x-handlebars-template" id="library-template">
+<ul>
+  {{#each library}}
+  <li>
+  <em>{{name}}</em> by {{author}} published in {{publishDate.year}}
+  </li>
+  {{/each}}
+</ul>
+</script>
+
+
