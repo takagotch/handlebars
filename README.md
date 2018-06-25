@@ -1,6 +1,6 @@
 ### template
 
-## handlebars
+### handlebars
 https://github.com/wycats/handlebars.js/
 
 ---
